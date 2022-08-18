@@ -9,12 +9,16 @@ bodyEl.appendChild(container);
 const icon = document.createElement("img");
 icon.src = "./images/illustration-woman-online-mobile.svg";
 icon.classList.add("icon");
-bodyEl.append(icon);
+container.append(icon);
+
+const contentContainer = document.createElement("div");
+contentContainer.classList.add("content-container");
+container.append(contentContainer);
 
 const faqtitle = document.createElement("h1");
 faqtitle.textContent = "FAQ";
 faqtitle.classList.add("faqtitle");
-container.append(faqtitle);
+contentContainer.append(faqtitle);
 
 const allIdeaElements = questions.map((q) => {
   const dropdownIcon = document.createElement("img");
@@ -41,7 +45,7 @@ const allIdeaElements = questions.map((q) => {
 });
 
 allIdeaElements.forEach((ideaEl, index) => {
-  container.append(ideaEl);
+  contentContainer.append(ideaEl);
 
   ideaEl.addEventListener("click", () => {
     for (let i of allIdeaElements) {

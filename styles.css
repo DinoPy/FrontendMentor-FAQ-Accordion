@@ -20,9 +20,9 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 p,
@@ -41,9 +41,10 @@ h6 {
 .container {
   width: 85%;
   height: 70%;
+  margin: 8rem auto;
   background-color: white;
 
-  padding: 9em 1.5em 1em;
+  padding: 0em 1.5em 1em;
   border-radius: 1.5em;
   position: relative;
 
@@ -51,9 +52,11 @@ h6 {
 }
 
 .icon {
-  position: absolute;
-  width: 60%;
-  top: 0;
+  position: relative;
+  top: -17%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15rem;
   cursor: pointer;
 
   -webkit-filter: drop-shadow(0 1.8em 0 hsl(237, 12%, 33%, 0.234));
@@ -62,6 +65,7 @@ h6 {
 
 .faqtitle {
   text-align: center;
+  margin: 0 0 1em;
 }
 
 .open {
@@ -77,9 +81,14 @@ h6 {
   transform: rotate(180deg);
 }
 
+.content-container {
+  position: relative;
+  top: -10%;
+}
+
 .idea {
-  font-size: 0.85rem;
-  padding: 1em 0;
+  font-size: 1rem;
+  padding: 1.4em 0;
   border-bottom: 1px solid lightgray;
 }
 
@@ -89,8 +98,52 @@ h6 {
   justify-content: space-between;
 }
 
+.question:hover,
+.question:focus {
+  color: hsl(14, 88%, 65%);
+  cursor: pointer;
+}
+
 .answer {
-  font-size: 0.8rem;
+  font-size: 0.9.5rem;
   font-weight: normal;
   color: hsl(240, 6%, 50%);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 80%;
+    height: 60%;
+    padding: 0em 1.5em 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .content-container {
+    position: initial;
+    align-self: center;
+    padding-right: 5em;
+  }
+
+  .icon {
+    width: 27rem;
+    left: 5rem;
+    top: -5%;
+    align-self: center;
+
+    -webkit-filter: drop-shadow(-10rem 1.8em 0 hsl(237, 12%, 33%, 0.234));
+    filter: drop-shadow(0 4rem 0 hsla(237, 12%, 33%, 0.234));
+  }
+
+  .faqtitle {
+  }
+
+  .idea {
+  }
 }
