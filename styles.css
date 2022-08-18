@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Kumbh Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    hsl(273, 75%, 66%),
+    hsl(240, 73%, 65%)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.container {
+  width: 85%;
+  height: 70%;
+  background-color: white;
+
+  padding: 9em 1.5em 1em;
+  border-radius: 1.5em;
+  position: relative;
+
+  filter: drop-shadow(0 1em 1.5em rgba(0, 0, 0, 0.3));
+}
+
+.icon {
+  position: absolute;
+  width: 60%;
+  top: 0;
+  cursor: pointer;
+
+  -webkit-filter: drop-shadow(0 1.8em 0 hsl(237, 12%, 33%, 0.234));
+  filter: drop-shadow(0 1.8em 0 hsla(237, 12%, 33%, 0.234));
+}
+
+.faqtitle {
+  text-align: center;
+}
+
+.open {
+  font-weight: bold;
+}
+
+.open .answer {
+  margin-top: 0.5em;
+}
+
+.open .dropdown-icon {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.idea {
+  font-size: 0.85rem;
+  padding: 1em 0;
+  border-bottom: 1px solid lightgray;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.answer {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: hsl(240, 6%, 50%);
+}
