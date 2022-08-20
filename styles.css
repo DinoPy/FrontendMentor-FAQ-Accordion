@@ -65,7 +65,7 @@ h6 {
 
 .faqtitle {
   text-align: center;
-  margin: 0 0 1em;
+  margin: 1em 0 1em;
 }
 
 .open {
@@ -88,7 +88,7 @@ h6 {
 
 .idea {
   font-size: 1rem;
-  padding: 1.4em 0;
+  padding: 1.2em 0;
   border-bottom: 1px solid lightgray;
 }
 
@@ -120,6 +120,7 @@ h6 {
   .container {
     width: 80%;
     height: 60%;
+	max-height:700px;
     padding: 0em 1.5em 1em;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -132,18 +133,43 @@ h6 {
   }
 
   .icon {
-    width: 27rem;
-    left: 5rem;
+	flex-basis:50%;
+    left: -3rem;
     top: -5%;
     align-self: center;
+	transform: scale(150%);
 
     -webkit-filter: drop-shadow(-10rem 1.8em 0 hsl(237, 12%, 33%, 0.234));
-    filter: drop-shadow(0 4rem 0 hsla(237, 12%, 33%, 0.234));
+    filter: drop-shadow(0 2rem 0 hsla(237, 12%, 33%, 0.234));
   }
 
-  .faqtitle {
-  }
 
-  .idea {
-  }
+}
+
+@media (min-width: 1000px) {
+	.container {
+		max-width:700px;
+	}
+
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width:800px;
+	}
+}
+
+@media (min-width: 1450px) {
+	.container {
+		max-width:800px;
+	}
+	.icon {
+		transform: scale(200%)
+	}
+}
+
+
+@media (min-width: 1600px) {
+	container: 
+
 }
